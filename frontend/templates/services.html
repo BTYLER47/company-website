@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services - TechSolutions Pro{% endblock %}
+{% block meta_description %}IT equipment sales, computer repair, network setup, CCTV installation, printer servicing, printing and branding services.{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Our Services</h1>
+        <p class="lead">Professional IT services tailored to your needs</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Services</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="container">
+
+        <!-- Computer Repair -->
+        <div id="repair" class="service-section mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                    <div class="service-icon-large"><i class="bi bi-tools"></i></div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Computer Repair</h3>
+                    <p class="text-muted">Fast, reliable computer and laptop repair services. From hardware diagnostics to software troubleshooting, our certified technicians handle it all.</p>
+                    <div class="row g-2 mt-2">
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Hardware Repair</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Virus Removal</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">OS Installation</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Data Recovery</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Screen Replacement</span></div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="text-muted small">Starting from </span>
+                        <strong class="text-accent">KES 500</strong>
+                        <a href="/service-request/?service=repair" class="btn btn-accent btn-sm ms-3">
+                            <i class="bi bi-tools me-1"></i>Request Repair
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Network Setup -->
+        <div id="network" class="service-section mb-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                    <div class="service-icon-large"><i class="bi bi-router"></i></div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Network Setup</h3>
+                    <p class="text-muted">Complete LAN, WAN, and WiFi network design and installation. We handle everything from small home networks to enterprise-level infrastructure.</p>
+                    <div class="row g-2 mt-2">
+                        <div class="col-auto"><span class="badge bg-light text-dark border">WiFi Setup</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">LAN Cabling</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Router Config</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Firewall Setup</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">VPN Configuration</span></div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="text-muted small">Starting from </span>
+                        <strong class="text-accent">KES 5,000</strong>
+                        <a href="/service-request/?service=network" class="btn btn-accent btn-sm ms-3">
+                            <i class="bi bi-router me-1"></i>Request Setup
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- CCTV Installation -->
+        <div id="cctv" class="service-section mb-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                    <div class="service-icon-large"><i class="bi bi-camera-video"></i></div>
+                </div>
+                <div class="col-md-10">
+                    <h3>CCTV Installation</h3>
+                    <p class="text-muted">Protect your property with our professional CCTV security camera systems. We handle site survey, installation, configuration, and maintenance.</p>
+                    <div class="row g-2 mt-2">
+                        <div class="col-auto"><span class="badge bg-light text-dark border">IP Cameras</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">DVR/NVR Setup</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Remote Viewing</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Night Vision</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Cloud Storage</span></div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="text-muted small">Starting from </span>
+                        <strong class="text-accent">KES 15,000</strong>
+                        <a href="/service-request/?service=cctv" class="btn btn-accent btn-sm ms-3">
+                            <i class="bi bi-camera-video me-1"></i>Request Installation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Office Infrastructure -->
+        <div id="office" class="service-section mb-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                    <div class="service-icon-large"><i class="bi bi-building"></i></div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Office Infrastructure Setup</h3>
+                    <p class="text-muted">Complete office IT setup from scratch. We supply, install, and configure all IT equipment needed for your new or existing office.</p>
+                    <div class="row g-2 mt-2">
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Workstation Setup</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Server Installation</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Network Cabling</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">UPS Systems</span></div>
+                    </div>
+                    <div class="mt-3">
+                        <a href="/service-request/?service=office" class="btn btn-accent btn-sm">
+                            <i class="bi bi-building me-1"></i>Get Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Printer Servicing -->
+        <div id="printer" class="service-section mb-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                    <div class="service-icon-large"><i class="bi bi-printer"></i></div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Printer Servicing</h3>
+                    <p class="text-muted">Expert printer repair and maintenance for all major brands. From inkjet to laser printers, we get you printing again fast.</p>
+                    <div class="row g-2 mt-2">
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Inkjet Repair</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Laser Repair</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Toner Refill</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">Drum Replacement</span></div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="text-muted small">Starting from </span>
+                        <strong class="text-accent">KES 800</strong>
+                        <a href="/service-request/?service=printer" class="btn btn-accent btn-sm ms-3">
+                            <i class="bi bi-printer me-1"></i>Request Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

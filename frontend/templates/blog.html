@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog & Tech News - TechSolutions Pro{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <h1>Blog & News</h1>
+        <p class="lead">Tech tips, company updates, and industry news</p>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="container">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-lg-8">
+                <!-- Search -->
+                <div class="mb-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" id="blogSearch" placeholder="Search articles...">
+                        <button class="btn btn-accent" type="button"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+
+                <!-- Posts Grid -->
+                <div id="blogPostsGrid" class="row g-4">
+                    <!-- Loaded via JS -->
+                </div>
+
+                <!-- Pagination -->
+                <nav class="mt-4">
+                    <ul class="pagination" id="blogPagination"></ul>
+                </nav>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Categories -->
+                <div class="blog-widget mb-4">
+                    <h5 class="widget-title">Categories</h5>
+                    <div id="blogCategories">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+
+                <!-- Recent Posts -->
+                <div class="blog-widget mb-4">
+                    <h5 class="widget-title">Recent Posts</h5>
+                    <div id="recentPosts">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+
+                <!-- CTA Widget -->
+                <div class="blog-widget bg-dark text-white">
+                    <h5 class="text-accent mb-2">Need IT Help?</h5>
+                    <p class="small">Our technicians are ready to assist you today.</p>
+                    <a href="/service-request/" class="btn btn-accent btn-sm w-100">Request Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/blog.js' %}"></script>
+{% endblock %}

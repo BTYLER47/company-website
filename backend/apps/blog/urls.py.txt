@@ -1,0 +1,15 @@
+from django.urls import path
+from django.views.generic import TemplateView
+
+urlpatterns = [
+    path('blog/', TemplateView.as_view(template_name='blog.html'), name='blog'),
+]
+```
+
+---
+
+## STEP 4 — Run Again
+
+Go back to your terminal and type:
+```
+python manage.py runserver

@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Printing & Branding Services - TechSolutions Pro{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <h1>Printing & Branding</h1>
+        <p class="lead">High-quality printing and branding solutions for your business</p>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="container">
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="printing-card">
+                    <div class="printing-icon"><i class="bi bi-shirt"></i></div>
+                    <h5>T-Shirt Printing</h5>
+                    <p class="text-muted">Custom t-shirt printing with screen printing, DTF, and heat transfer. Minimum order 5 pieces.</p>
+                    <div class="pricing-badge">From KES 500/piece</div>
+                    <a href="#orderForm" class="btn btn-outline-accent btn-sm mt-2">Order Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="printing-card">
+                    <div class="printing-icon"><i class="bi bi-cup-hot"></i></div>
+                    <h5>Mug Printing</h5>
+                    <p class="text-muted">Custom branded mugs perfect for corporate gifts, events, and promotions.</p>
+                    <div class="pricing-badge">From KES 350/piece</div>
+                    <a href="#orderForm" class="btn btn-outline-accent btn-sm mt-2">Order Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="printing-card">
+                    <div class="printing-icon"><i class="bi bi-sticker"></i></div>
+                    <h5>Sticker Branding</h5>
+                    <p class="text-muted">Vinyl stickers, logo stickers, bumper stickers. Custom sizes and finishes available.</p>
+                    <div class="pricing-badge">From KES 50/piece</div>
+                    <a href="#orderForm" class="btn btn-outline-accent btn-sm mt-2">Order Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="printing-card">
+                    <div class="printing-icon"><i class="bi bi-truck"></i></div>
+                    <h5>Vehicle Branding</h5>
+                    <p class="text-muted">Full and partial vehicle wraps with premium vinyl. Motorcycles, cars, vans, and trucks.</p>
+                    <div class="pricing-badge">From KES 5,000</div>
+                    <a href="#orderForm" class="btn btn-outline-accent btn-sm mt-2">Get Quote</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="printing-card">
+                    <div class="printing-icon"><i class="bi bi-image"></i></div>
+                    <h5>Banner Printing</h5>
+                    <p class="text-muted">Roll-up banners, pull-up banners, vinyl banners. Any size, indoor and outdoor.</p>
+                    <div class="pricing-badge">From KES 1,500</div>
+                    <a href="#orderForm" class="btn btn-outline-accent btn-sm mt-2">Order Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="printing-card">
+                    <div class="printing-icon"><i class="bi bi-card-text"></i></div>
+                    <h5>Business Cards</h5>
+                    <p class="text-muted">Premium business cards with UV, matte, gloss or spot UV finish. 250 cards minimum.</p>
+                    <div class="pricing-badge">From KES 1,200/250pcs</div>
+                    <a href="#orderForm" class="btn btn-outline-accent btn-sm mt-2">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Estimation Tool -->
+        <div class="mt-5 p-4 bg-light rounded-3">
+            <h4 class="fw-bold mb-3">Quick Price Estimator</h4>
+            <div class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label class="form-label">Product Type</label>
+                    <select class="form-select" id="estimateProduct">
+                        <option value="tshirt">T-Shirt</option>
+                        <option value="mug">Mug</option>
+                        <option value="sticker">Sticker</option>
+                        <option value="banner">Banner</option>
+                        <option value="card">Business Cards</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="estimateQty" value="10" min="1">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-accent w-100" onclick="calculateEstimate()">
+                        <i class="bi bi-calculator me-1"></i>Estimate Price
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <div class="estimate-result" id="estimateResult">
+                        <strong>Estimated: </strong><span id="estimatePrice">—</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <div id="orderForm" class="mt-5">
+            <h4 class="fw-bold mb-4">Place Your Order</h4>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="form-card">
+                        <form id="printingOrderForm">
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" name="customer_name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" name="phone" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Service Type</label>
+                                    <select class="form-select" name="service_type" required>
+                                        <option value="">Select printing service</option>
+                                        <option>T-Shirt Printing</option>
+                                        <option>Mug Printing</option>
+                                        <option>Sticker Branding</option>
+                                        <option>Vehicle Branding</option>
+                                        <option>Banner Printing</option>
+                                        <option>Business Cards</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Order Details</label>
+                                    <textarea class="form-control" rows="4" name="description" required
+                                        placeholder="Describe what you need: quantity, colors, design details, sizes, etc."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Upload Design File (optional)</label>
+                                    <input type="file" class="form-control" name="image" accept="image/*,.pdf,.ai,.psd">
+                                    <div class="form-text">Accepted formats: JPG, PNG, PDF, AI, PSD</div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-accent px-5">
+                                        <i class="bi bi-send me-2"></i>Submit Order
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const prices = { tshirt: 500, mug: 350, sticker: 50, banner: 1500, card: 5 };
+function calculateEstimate() {
+    const product = document.getElementById('estimateProduct').value;
+    const qty = parseInt(document.getElementById('estimateQty').value) || 1;
+    const price = prices[product] * qty;
+    document.getElementById('estimatePrice').textContent = 'KES ' + price.toLocaleString();
+}
+</script>
+{% endblock %}

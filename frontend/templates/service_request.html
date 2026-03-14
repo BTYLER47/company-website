@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Request a Service - TechSolutions Pro{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <h1>Request a Service</h1>
+        <p class="lead">Fill in the form below and our team will contact you within 2 hours</p>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-card">
+                    <form id="serviceRequestForm" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="customer_name" required placeholder="Your full name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" name="phone" required placeholder="+254 XXX XXXXXX">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Service Type <span class="text-danger">*</span></label>
+                                <select class="form-select" name="service" required id="serviceSelect">
+                                    <option value="">-- Select a Service --</option>
+                                    <!-- Loaded via JS from API -->
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Location / Address <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="location" required placeholder="Where do you need the service?">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Problem Description <span class="text-danger">*</span></label>
+                                <textarea class="form-control" name="description" rows="5" required
+                                    placeholder="Describe your issue in detail. The more information you provide, the better we can help you."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Upload Image (optional)</label>
+                                <input type="file" class="form-control" name="image" accept="image/*">
+                                <div class="form-text">Upload a photo of the problem if applicable (max 5MB)</div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-accent btn-lg px-5">
+                                    <i class="bi bi-send me-2"></i>Submit Request
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="requestSuccess" class="alert alert-success mt-4 d-none">
+                        <i class="bi bi-check-circle me-2"></i>
+                        <strong>Request submitted successfully!</strong> Our team will contact you within 2 hours.
+                    </div>
+                    <div id="requestError" class="alert alert-danger mt-4 d-none">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Something went wrong. Please try again or call us directly.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="col-lg-4">
+                <div class="info-sidebar">
+                    <h5 class="fw-bold mb-4">Contact Information</h5>
+                    <div class="info-item mb-3">
+                        <i class="bi bi-telephone-fill text-accent me-2"></i>
+                        <strong>+254 XXX XXXXXX</strong>
+                    </div>
+                    <div class="info-item mb-3">
+                        <i class="bi bi-whatsapp text-accent me-2"></i>
+                        <strong>WhatsApp Available</strong>
+                    </div>
+                    <div class="info-item mb-4">
+                        <i class="bi bi-clock text-accent me-2"></i>
+                        <strong>Mon–Sat, 8AM–6PM</strong>
+                    </div>
+                    <hr>
+                    <h6 class="fw-bold mt-4 mb-3">What Happens Next?</h6>
+                    <div class="steps">
+                        <div class="step-item">
+                            <div class="step-num">1</div>
+                            <div>We receive your request</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">2</div>
+                            <div>Technician contacts you within 2 hours</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">3</div>
+                            <div>We schedule a visit or remote session</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">4</div>
+                            <div>Problem solved!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/service-request.js' %}"></script>
+{% endblock %}
