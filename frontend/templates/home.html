@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}TechSolutions Pro - IT Services, Equipment & Branding in Nairobi{% endblock %}
+{% block title %}Hubgroup Systems - Kenya's #1 IT Partner Nationwide{% endblock %}
 
 {% block content %}
 
@@ -11,13 +11,13 @@
     <div class="container position-relative">
         <div class="row align-items-center min-vh-hero">
             <div class="col-lg-6">
-                <div class="hero-badge mb-3">🇰🇪 Nairobi's #1 IT Partner</div>
+                <div class="hero-badge mb-3">🇰🇪 Kenya's Nationwide IT Partner</div>
                 <h1 class="hero-title">
                     Technology<br>
                     <span class="text-accent">Solutions</span><br>
                     That Work
                 </h1>
-                <p class="hero-subtitle">IT equipment sales, computer repair, network setup, CCTV installation, printing and branding — all under one roof.</p>
+                <p class="hero-subtitle">IT equipment sales, computer repair, network setup, CCTV installation, printing and branding — serving Nairobi, Mombasa and all of Kenya.</p>
                 <div class="hero-actions mt-4 d-flex gap-3 flex-wrap">
                     <a href="/service-request/" class="btn btn-accent btn-lg px-4">
                         <i class="bi bi-headset me-2"></i>Request Service
@@ -36,58 +36,66 @@
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Satisfaction Rate</div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Offices Nationwide</div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="hero-image-grid">
-                    <div class="hero-img-card hero-img-1"><i class="bi bi-pc-display-horizontal"></i></div>
-                    <div class="hero-img-card hero-img-2"><i class="bi bi-router"></i></div>
-                    <div class="hero-img-card hero-img-3"><i class="bi bi-camera-video"></i></div>
-                    <div class="hero-img-card hero-img-4"><i class="bi bi-printer"></i></div>
+                    <div class="hero-img-card hero-img-1">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=200&h=200&fit=crop&auto=format" alt="IT Repair" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
+                    </div>
+                    <div class="hero-img-card hero-img-2">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&h=200&fit=crop&auto=format" alt="Network Setup" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
+                    </div>
+                    <div class="hero-img-card hero-img-3">
+                        <img src="https://images.unsplash.com/photo-1609239248844-c5c8d5f5e866?w=200&h=200&fit=crop&auto=format" alt="CCTV" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
+                    </div>
+                    <div class="hero-img-card hero-img-4">
+                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=200&h=200&fit=crop&auto=format" alt="Printing" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Services Preview Section -->
+<!-- Services Preview -->
 <section class="section-pad bg-light" id="services-preview">
     <div class="container">
         <div class="section-header text-center mb-5">
             <span class="section-badge">What We Do</span>
             <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive IT solutions for businesses and individuals</p>
+            <p class="section-subtitle">Comprehensive IT solutions for businesses and individuals across Kenya</p>
         </div>
         <div class="row g-4">
             <div class="col-md-4 col-lg-2">
                 <div class="service-card text-center">
                     <div class="service-icon"><i class="bi bi-tools"></i></div>
                     <h6>Computer Repair</h6>
-                    <p class="small text-muted">Fast diagnostics & repair</p>
+                    <p class="small text-muted">HP, Dell, Lenovo, Asus</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-2">
                 <div class="service-card text-center">
                     <div class="service-icon"><i class="bi bi-router"></i></div>
                     <h6>Network Setup</h6>
-                    <p class="small text-muted">LAN, WiFi & infrastructure</p>
+                    <p class="small text-muted">Cisco, Ubiquiti, TP-Link</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-2">
                 <div class="service-card text-center">
                     <div class="service-icon"><i class="bi bi-camera-video"></i></div>
                     <h6>CCTV Installation</h6>
-                    <p class="small text-muted">Security camera systems</p>
+                    <p class="small text-muted">Hikvision, Dahua, CP Plus</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-2">
                 <div class="service-card text-center">
                     <div class="service-icon"><i class="bi bi-printer"></i></div>
                     <h6>Printer Servicing</h6>
-                    <p class="small text-muted">Repairs & maintenance</p>
+                    <p class="small text-muted">HP, Canon, Epson, Kyocera</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-2">
@@ -111,7 +119,7 @@
     </div>
 </section>
 
-<!-- Featured Products Section -->
+<!-- Featured Products -->
 <section class="section-pad" id="featured-products">
     <div class="container">
         <div class="section-header d-flex justify-content-between align-items-end mb-4">
@@ -121,24 +129,71 @@
             </div>
             <a href="/products/" class="btn btn-outline-dark btn-sm">View All <i class="bi bi-arrow-right"></i></a>
         </div>
-        <div class="row g-4" id="featuredProductsGrid">
-            <!-- Loaded via JS/API -->
-            <div class="col-md-3"><div class="product-card skeleton"></div></div>
-            <div class="col-md-3"><div class="product-card skeleton"></div></div>
-            <div class="col-md-3"><div class="product-card skeleton"></div></div>
-            <div class="col-md-3"><div class="product-card skeleton"></div></div>
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop&auto=format" alt="Laptop" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-category mb-1">Laptops</div>
+                        <h6 class="fw-bold mb-1">HP EliteBook 840</h6>
+                        <div class="product-price mb-2">KES 85,000</div>
+                        <a href="/products/" class="btn btn-accent btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&h=300&fit=crop&auto=format" alt="Desktop" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-category mb-1">Desktops</div>
+                        <h6 class="fw-bold mb-1">Dell OptiPlex 7090</h6>
+                        <div class="product-price mb-2">KES 65,000</div>
+                        <a href="/products/" class="btn btn-accent btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop&auto=format" alt="Printer" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-category mb-1">Printers</div>
+                        <h6 class="fw-bold mb-1">HP LaserJet Pro M404</h6>
+                        <div class="product-price mb-2">KES 28,000</div>
+                        <a href="/products/" class="btn btn-accent btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop&auto=format" alt="Networking" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-category mb-1">Networking</div>
+                        <h6 class="fw-bold mb-1">Cisco Catalyst Switch</h6>
+                        <div class="product-price mb-2">KES 45,000</div>
+                        <a href="/products/" class="btn btn-accent btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Why Choose Us Section -->
+<!-- Why Choose Us -->
 <section class="section-pad bg-dark text-white" id="why-us">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 mb-4 mb-lg-0">
-                <span class="section-badge-light">Why TechSolutions Pro?</span>
+                <span class="section-badge-light">Why Hubgroup Systems?</span>
                 <h2 class="section-title text-white mt-2">Built on Trust, Powered by Expertise</h2>
-                <p class="text-secondary">We combine technical excellence with outstanding customer service to deliver IT solutions that truly make a difference for your business.</p>
+                <p class="text-secondary">We combine technical excellence with outstanding customer service to deliver IT solutions that truly make a difference for your business — from Nairobi to Mombasa and beyond.</p>
                 <a href="/about/" class="btn btn-accent mt-3 px-4">Learn More About Us</a>
             </div>
             <div class="col-lg-7">
@@ -154,7 +209,7 @@
                         <div class="why-card">
                             <i class="bi bi-shield-check-fill text-accent"></i>
                             <h6>Certified Technicians</h6>
-                            <p class="small text-secondary">Trained & certified IT professionals</p>
+                            <p class="small text-secondary">CompTIA, Cisco & Microsoft certified</p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -166,9 +221,9 @@
                     </div>
                     <div class="col-6">
                         <div class="why-card">
-                            <i class="bi bi-headset text-accent"></i>
-                            <h6>24/7 Support</h6>
-                            <p class="small text-secondary">Always available when you need us</p>
+                            <i class="bi bi-geo-alt-fill text-accent"></i>
+                            <h6>Nationwide Coverage</h6>
+                            <p class="small text-secondary">Nairobi, Mombasa & all of Kenya</p>
                         </div>
                     </div>
                 </div>
@@ -177,7 +232,7 @@
     </div>
 </section>
 
-<!-- Testimonials Section -->
+<!-- Testimonials -->
 <section class="section-pad bg-light" id="testimonials">
     <div class="container">
         <div class="section-header text-center mb-5">
@@ -188,9 +243,9 @@
             <div class="col-md-4">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"TechSolutions Pro set up our entire office network in one day. Professional, fast, and affordable. Highly recommended!"</p>
+                    <p>"Hubgroup Systems set up our entire office network in one day. Professional, fast, and affordable. Highly recommended!"</p>
                     <div class="client-info">
-                        <div class="client-avatar">JM</div>
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&auto=format" alt="Client" class="client-photo">
                         <div>
                             <strong>James Mwangi</strong>
                             <div class="small text-muted">CEO, Mwangi Enterprises</div>
@@ -201,12 +256,12 @@
             <div class="col-md-4">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"They repaired my laptop quickly and at a great price. The technician was knowledgeable and explained everything clearly."</p>
+                    <p>"They repaired my laptop quickly and at a great price. The technician was very knowledgeable and explained everything clearly."</p>
                     <div class="client-info">
-                        <div class="client-avatar">AK</div>
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=80&h=80&fit=crop&auto=format" alt="Client" class="client-photo">
                         <div>
                             <strong>Amina Kamau</strong>
-                            <div class="small text-muted">Freelance Designer</div>
+                            <div class="small text-muted">Freelance Designer, Nairobi</div>
                         </div>
                     </div>
                 </div>
@@ -214,12 +269,12 @@
             <div class="col-md-4">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Our CCTV system was installed perfectly. The branding materials they printed for us were top-notch quality."</p>
+                    <p>"Our CCTV system was installed perfectly. The branding materials they printed for our shop were top-notch quality."</p>
                     <div class="client-info">
-                        <div class="client-avatar">PO</div>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&auto=format" alt="Client" class="client-photo">
                         <div>
                             <strong>Peter Otieno</strong>
-                            <div class="small text-muted">Shop Owner, Westlands</div>
+                            <div class="small text-muted">Shop Owner, Mombasa</div>
                         </div>
                     </div>
                 </div>
@@ -228,7 +283,50 @@
     </div>
 </section>
 
-<!-- Contact Quick Form Section -->
+<!-- Partners Section -->
+<section class="partners-section">
+    <div class="text-center mb-3">
+        <span class="section-badge">Trusted Brands</span>
+        <h5 class="fw-bold mt-1">Brands We Work With</h5>
+    </div>
+    <div class="partners-wrapper" style="overflow:hidden;">
+        <div class="partners-track">
+            <div class="partner-logo">HP</div>
+            <div class="partner-logo">Dell</div>
+            <div class="partner-logo">Cisco</div>
+            <div class="partner-logo">Samsung</div>
+            <div class="partner-logo">Hikvision</div>
+            <div class="partner-logo">Epson</div>
+            <div class="partner-logo">Canon</div>
+            <div class="partner-logo">Microsoft</div>
+            <div class="partner-logo">Lenovo</div>
+            <div class="partner-logo">Ubiquiti</div>
+            <div class="partner-logo">Dahua</div>
+            <div class="partner-logo">Kyocera</div>
+            <div class="partner-logo">TP-Link</div>
+            <div class="partner-logo">Asus</div>
+            <div class="partner-logo">Xerox</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="partner-logo">HP</div>
+            <div class="partner-logo">Dell</div>
+            <div class="partner-logo">Cisco</div>
+            <div class="partner-logo">Samsung</div>
+            <div class="partner-logo">Hikvision</div>
+            <div class="partner-logo">Epson</div>
+            <div class="partner-logo">Canon</div>
+            <div class="partner-logo">Microsoft</div>
+            <div class="partner-logo">Lenovo</div>
+            <div class="partner-logo">Ubiquiti</div>
+            <div class="partner-logo">Dahua</div>
+            <div class="partner-logo">Kyocera</div>
+            <div class="partner-logo">TP-Link</div>
+            <div class="partner-logo">Asus</div>
+            <div class="partner-logo">Xerox</div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Quick Form -->
 <section class="section-pad" id="contact-section">
     <div class="container">
         <div class="row align-items-center">
@@ -240,15 +338,22 @@
                     <div class="d-flex align-items-center mb-3">
                         <div class="contact-icon me-3"><i class="bi bi-telephone-fill"></i></div>
                         <div>
-                            <div class="small text-muted">Call us directly</div>
-                            <strong>+254 XXX XXXXXX</strong>
+                            <div class="small text-muted">Nairobi Office</div>
+                            <strong><a href="tel:+254745798060">+254 745 798 060</a></strong>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="contact-icon me-3"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <div class="small text-muted">Mombasa Office</div>
+                            <strong><a href="tel:+254705444447">+254 705 444 447</a></strong>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="contact-icon me-3"><i class="bi bi-whatsapp"></i></div>
                         <div>
                             <div class="small text-muted">WhatsApp</div>
-                            <strong>+254 XXX XXXXXX</strong>
+                            <strong>+254 745 798 060</strong>
                         </div>
                     </div>
                 </div>

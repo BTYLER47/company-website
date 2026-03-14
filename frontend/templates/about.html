@@ -1,53 +1,77 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}About Us - TechSolutions Pro{% endblock %}
+{% block title %}About Us - Hubgroup Systems{% endblock %}
 
 {% block content %}
 
 <section class="page-header">
     <div class="container">
-        <h1>About Us</h1>
-        <p class="lead">Your trusted IT partner in Nairobi since 2016</p>
+        <h1>About Hubgroup Systems</h1>
+        <p class="lead">Your trusted nationwide IT partner since 2016</p>
     </div>
 </section>
 
 <section class="section-pad">
     <div class="container">
-        <!-- Company History & Intro -->
+
+        <!-- Company Story -->
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <span class="section-badge">Our Story</span>
                 <h2 class="section-title">Built on a Passion for Technology</h2>
-                <p>Founded in 2016, TechSolutions Pro started as a small computer repair shop in Nairobi. Over the years, we grew into a comprehensive IT solutions provider, serving hundreds of businesses and individuals across Kenya.</p>
-                <p>Today, we offer a wide range of services — from IT equipment sales and network infrastructure to printing, branding, and CCTV security systems. Our mission remains simple: deliver reliable, high-quality IT services that empower our clients.</p>
+                <p>Founded in 2016, Hubgroup Systems started as a small computer repair shop in Nairobi. Over the years, we grew into a comprehensive IT solutions provider, serving hundreds of businesses and individuals across Kenya.</p>
+                <p>Today, we operate offices in Nairobi and Mombasa, offering a wide range of services — from IT equipment sales and network infrastructure to printing, branding, and CCTV security systems. Our mission remains simple: deliver reliable, high-quality IT services that empower our clients.</p>
+                <div class="d-flex gap-3 mt-4">
+                    <div>
+                        <i class="bi bi-geo-alt-fill text-accent me-1"></i>
+                        <strong>Nairobi:</strong> <a href="tel:+254745798060">0745 798 060</a>
+                    </div>
+                    <div>
+                        <i class="bi bi-geo-alt-fill text-accent me-1"></i>
+                        <strong>Mombasa:</strong> <a href="tel:+254705444447">0705 444 447</a>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6">
-                <div class="row g-3 text-center">
+                <div class="row g-3">
                     <div class="col-6">
-                        <div class="stat-card-big">
-                            <div class="stat-big-num">8+</div>
-                            <div class="stat-big-label">Years in Business</div>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop&auto=format" alt="Office" class="img-fluid rounded-3">
                     </div>
                     <div class="col-6">
-                        <div class="stat-card-big">
-                            <div class="stat-big-num">500+</div>
-                            <div class="stat-big-label">Happy Clients</div>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop&auto=format" alt="Team" class="img-fluid rounded-3">
                     </div>
-                    <div class="col-6">
-                        <div class="stat-card-big">
-                            <div class="stat-big-num">2,000+</div>
-                            <div class="stat-big-label">Projects Completed</div>
-                        </div>
+                    <div class="col-12">
+                        <img src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=800&h=250&fit=crop&auto=format" alt="IT Work" class="img-fluid rounded-3">
                     </div>
-                    <div class="col-6">
-                        <div class="stat-card-big">
-                            <div class="stat-big-num">15+</div>
-                            <div class="stat-big-label">Team Members</div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="row g-3 mb-5">
+            <div class="col-6 col-md-3">
+                <div class="stat-card-big text-center">
+                    <div class="stat-big-num">8+</div>
+                    <div class="stat-big-label">Years in Business</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card-big text-center">
+                    <div class="stat-big-num">500+</div>
+                    <div class="stat-big-label">Happy Clients</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card-big text-center">
+                    <div class="stat-big-num">2,000+</div>
+                    <div class="stat-big-label">Projects Done</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card-big text-center">
+                    <div class="stat-big-num">2</div>
+                    <div class="stat-big-label">Offices Nationwide</div>
                 </div>
             </div>
         </div>
@@ -58,7 +82,7 @@
                 <div class="mission-card">
                     <div class="mission-icon"><i class="bi bi-bullseye"></i></div>
                     <h4>Our Mission</h4>
-                    <p>To provide affordable, high-quality IT solutions and services that empower businesses and individuals to leverage technology for growth and efficiency.</p>
+                    <p>To provide affordable, high-quality IT solutions and services that empower businesses and individuals to leverage technology for growth and efficiency across Kenya.</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -70,43 +94,132 @@
             </div>
         </div>
 
-        <!-- Team Members -->
+        <!-- Meet Our Staff -->
         <div class="mb-5">
-            <div class="section-header text-center mb-4">
+            <div class="section-header text-center mb-5">
                 <span class="section-badge">Our People</span>
-                <h2 class="section-title">Meet the Team</h2>
+                <h2 class="section-title">Meet Our Staff</h2>
+                <p class="section-subtitle">The dedicated team behind Hubgroup Systems</p>
             </div>
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4">
                 <div class="col-md-3 col-sm-6">
                     <div class="team-card text-center">
-                        <div class="team-avatar">JK</div>
-                        <h6 class="fw-bold mt-3 mb-1">John Kimani</h6>
-                        <div class="text-muted small">Founder & CEO</div>
-                        <div class="text-muted small">10+ years IT experience</div>
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&auto=format" alt="CEO" class="team-photo">
+                        </div>
+                        <h6 class="fw-bold mt-3 mb-1">Brian Kamau</h6>
+                        <div class="text-accent small fw-semibold">Founder & CEO</div>
+                        <div class="text-muted small mt-1">10+ years IT experience</div>
+                        <div class="text-muted small">Nairobi Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="team-card text-center">
-                        <div class="team-avatar bg-accent">SM</div>
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop&auto=format" alt="Operations" class="team-photo">
+                        </div>
                         <h6 class="fw-bold mt-3 mb-1">Sarah Muthoni</h6>
-                        <div class="text-muted small">Head of Operations</div>
-                        <div class="text-muted small">Certified Network Engineer</div>
+                        <div class="text-accent small fw-semibold">Head of Operations</div>
+                        <div class="text-muted small mt-1">Certified Network Engineer</div>
+                        <div class="text-muted small">Nairobi Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="team-card text-center">
-                        <div class="team-avatar bg-success">DO</div>
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&auto=format" alt="Technician" class="team-photo">
+                        </div>
                         <h6 class="fw-bold mt-3 mb-1">David Oloo</h6>
-                        <div class="text-muted small">Lead Technician</div>
-                        <div class="text-muted small">CompTIA A+ Certified</div>
+                        <div class="text-accent small fw-semibold">Lead Technician</div>
+                        <div class="text-muted small mt-1">CompTIA A+ Certified</div>
+                        <div class="text-muted small">Mombasa Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="team-card text-center">
-                        <div class="team-avatar bg-warning text-dark">GN</div>
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&auto=format" alt="Designer" class="team-photo">
+                        </div>
                         <h6 class="fw-bold mt-3 mb-1">Grace Njeri</h6>
-                        <div class="text-muted small">Branding Specialist</div>
-                        <div class="text-muted small">8+ years design experience</div>
+                        <div class="text-accent small fw-semibold">Branding Specialist</div>
+                        <div class="text-muted small mt-1">8+ years design experience</div>
+                        <div class="text-muted small">Nairobi Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-card text-center">
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&auto=format" alt="Network Engineer" class="team-photo">
+                        </div>
+                        <h6 class="fw-bold mt-3 mb-1">Kevin Mutua</h6>
+                        <div class="text-accent small fw-semibold">Network Engineer</div>
+                        <div class="text-muted small mt-1">Cisco CCNA Certified</div>
+                        <div class="text-muted small">Nairobi Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-card text-center">
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop&auto=format" alt="Support" class="team-photo">
+                        </div>
+                        <h6 class="fw-bold mt-3 mb-1">Faith Achieng</h6>
+                        <div class="text-accent small fw-semibold">Customer Support</div>
+                        <div class="text-muted small mt-1">5+ years in IT support</div>
+                        <div class="text-muted small">Mombasa Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-card text-center">
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&auto=format" alt="CCTV Tech" class="team-photo">
+                        </div>
+                        <h6 class="fw-bold mt-3 mb-1">James Njoroge</h6>
+                        <div class="text-accent small fw-semibold">CCTV Specialist</div>
+                        <div class="text-muted small mt-1">Hikvision Certified</div>
+                        <div class="text-muted small">Nairobi Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-card text-center">
+                        <div class="team-photo-wrap">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&auto=format" alt="Sales" class="team-photo">
+                        </div>
+                        <h6 class="fw-bold mt-3 mb-1">Mercy Wanjiku</h6>
+                        <div class="text-accent small fw-semibold">Sales Manager</div>
+                        <div class="text-muted small mt-1">6+ years in IT sales</div>
+                        <div class="text-muted small">Mombasa Office</div>
+                        <div class="team-social mt-2">
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,6 +234,8 @@
                 <div class="col-auto"><div class="cert-badge">Cisco CCNA</div></div>
                 <div class="col-auto"><div class="cert-badge">HP Partner</div></div>
                 <div class="col-auto"><div class="cert-badge">Hikvision Certified</div></div>
+                <div class="col-auto"><div class="cert-badge">Dell Partner</div></div>
+                <div class="col-auto"><div class="cert-badge">Ubiquiti Certified</div></div>
             </div>
         </div>
 

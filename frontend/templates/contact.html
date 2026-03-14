@@ -1,19 +1,68 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Contact Us - TechSolutions Pro{% endblock %}
+{% block title %}Contact Us - Hubgroup Systems{% endblock %}
 
 {% block content %}
 
 <section class="page-header">
     <div class="container">
         <h1>Contact Us</h1>
-        <p class="lead">We're here to help — reach out anytime</p>
+        <p class="lead">We're here to help — two offices nationwide</p>
     </div>
 </section>
 
 <section class="section-pad">
     <div class="container">
+
+        <!-- Office Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="office-card">
+                    <div class="office-img">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=250&fit=crop&auto=format" alt="Nairobi Office" class="img-fluid rounded-3">
+                    </div>
+                    <div class="mt-3">
+                        <h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-2"></i>Nairobi Office</h5>
+                        <div class="contact-detail mt-2">
+                            <i class="bi bi-telephone-fill text-accent me-2"></i>
+                            <a href="tel:+254745798060">+254 745 798 060</a>
+                        </div>
+                        <div class="contact-detail mt-2">
+                            <i class="bi bi-whatsapp text-accent me-2"></i>
+                            <a href="https://wa.me/254745798060">WhatsApp: 0745 798 060</a>
+                        </div>
+                        <div class="contact-detail mt-2">
+                            <i class="bi bi-envelope-fill text-accent me-2"></i>
+                            <a href="mailto:info@HubgroupSystems.co.ke">info@HubgroupSystems.co.ke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="office-card">
+                    <div class="office-img">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=250&fit=crop&auto=format" alt="Mombasa Office" class="img-fluid rounded-3">
+                    </div>
+                    <div class="mt-3">
+                        <h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-2"></i>Mombasa Office</h5>
+                        <div class="contact-detail mt-2">
+                            <i class="bi bi-telephone-fill text-accent me-2"></i>
+                            <a href="tel:+254705444447">+254 705 444 447</a>
+                        </div>
+                        <div class="contact-detail mt-2">
+                            <i class="bi bi-whatsapp text-accent me-2"></i>
+                            <a href="https://wa.me/254705444447">WhatsApp: 0705 444 447</a>
+                        </div>
+                        <div class="contact-detail mt-2">
+                            <i class="bi bi-envelope-fill text-accent me-2"></i>
+                            <a href="mailto:info@HubgroupSystems.co.ke">info@HubgroupSystems.co.ke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row g-5">
             <!-- Contact Form -->
             <div class="col-lg-7">
@@ -32,8 +81,7 @@
                             </div>
                             <div class="col-12">
                                 <label class="form-label">Message</label>
-                                <textarea class="form-control" name="message" rows="6" required
-                                    placeholder="How can we help you?"></textarea>
+                                <textarea class="form-control" name="message" rows="6" required placeholder="How can we help you?"></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-accent px-5">
@@ -48,43 +96,34 @@
                 </div>
             </div>
 
-            <!-- Contact Info & Map -->
+            <!-- Info & Hours -->
             <div class="col-lg-5">
                 <div class="contact-info-block mb-4">
-                    <h5 class="fw-bold mb-3">Get In Touch</h5>
+                    <h5 class="fw-bold mb-3">Business Hours</h5>
                     <div class="contact-detail">
-                        <i class="bi bi-geo-alt-fill text-accent"></i>
+                        <i class="bi bi-clock-fill text-accent"></i>
                         <div>
-                            <strong>Location</strong>
-                            <p class="text-muted mb-0">Nairobi, Kenya</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="bi bi-telephone-fill text-accent"></i>
-                        <div>
-                            <strong>Phone</strong>
-                            <p class="text-muted mb-0"><a href="tel:+254XXXXXXXXX">+254 XXX XXXXXX</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="bi bi-envelope-fill text-accent"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <p class="text-muted mb-0"><a href="mailto:info@techsolutionspro.co.ke">info@techsolutionspro.co.ke</a></p>
+                            <strong>Monday – Friday</strong>
+                            <p class="text-muted mb-0">8:00 AM – 6:00 PM</p>
                         </div>
                     </div>
                     <div class="contact-detail">
                         <i class="bi bi-clock-fill text-accent"></i>
                         <div>
-                            <strong>Business Hours</strong>
-                            <p class="text-muted mb-0">Mon–Fri: 8AM–6PM</p>
-                            <p class="text-muted mb-0">Saturday: 9AM–3PM</p>
-                            <p class="text-muted mb-0">Sunday: Closed</p>
+                            <strong>Saturday</strong>
+                            <p class="text-muted mb-0">9:00 AM – 3:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="bi bi-clock-fill text-accent"></i>
+                        <div>
+                            <strong>Sunday</strong>
+                            <p class="text-muted mb-0">Closed</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Google Map Embed -->
+                <!-- Google Map -->
                 <div class="map-embed rounded-3 overflow-hidden">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853743516!2d36.70730744999999!3d-1.3031933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1234567890"
@@ -102,8 +141,7 @@
 <script>
 document.getElementById('contactPageForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
+    const data = Object.fromEntries(new FormData(this).entries());
     try {
         const res = await fetch('/api/contact/', {
             method: 'POST',

@@ -1,22 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Our Services - TechSolutions Pro{% endblock %}
-{% block meta_description %}IT equipment sales, computer repair, network setup, CCTV installation, printer servicing, printing and branding services.{% endblock %}
+{% block title %}Our Services - Hubgroup Systems{% endblock %}
 
 {% block content %}
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="container">
         <h1>Our Services</h1>
-        <p class="lead">Professional IT services tailored to your needs</p>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active">Services</li>
-            </ol>
-        </nav>
+        <p class="lead">Professional IT services across Kenya — Nairobi & Mombasa</p>
     </div>
 </section>
 
@@ -25,13 +17,27 @@
 
         <!-- Computer Repair -->
         <div id="repair" class="service-section mb-5">
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div class="service-icon-large"><i class="bi bi-tools"></i></div>
+            <div class="row align-items-center g-4">
+                <div class="col-md-5">
+                    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=600&h=400&fit=crop&auto=format" alt="Computer Repair" class="img-fluid rounded-3">
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-7">
+                    <div class="service-icon-large mb-3"><i class="bi bi-tools"></i></div>
                     <h3>Computer Repair</h3>
                     <p class="text-muted">Fast, reliable computer and laptop repair services. From hardware diagnostics to software troubleshooting, our certified technicians handle it all.</p>
+                    <div class="mb-3">
+                        <strong class="small text-uppercase text-muted">Brands We Service:</strong>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="brand-badge">HP</span>
+                            <span class="brand-badge">Dell</span>
+                            <span class="brand-badge">Lenovo</span>
+                            <span class="brand-badge">Asus</span>
+                            <span class="brand-badge">Acer</span>
+                            <span class="brand-badge">Toshiba</span>
+                            <span class="brand-badge">Samsung</span>
+                            <span class="brand-badge">Apple</span>
+                        </div>
+                    </div>
                     <div class="row g-2 mt-2">
                         <div class="col-auto"><span class="badge bg-light text-dark border">Hardware Repair</span></div>
                         <div class="col-auto"><span class="badge bg-light text-dark border">Virus Removal</span></div>
@@ -54,19 +60,29 @@
 
         <!-- Network Setup -->
         <div id="network" class="service-section mb-5 mt-5">
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div class="service-icon-large"><i class="bi bi-router"></i></div>
-                </div>
-                <div class="col-md-10">
+            <div class="row align-items-center g-4">
+                <div class="col-md-7 order-2 order-md-1">
+                    <div class="service-icon-large mb-3"><i class="bi bi-router"></i></div>
                     <h3>Network Setup</h3>
-                    <p class="text-muted">Complete LAN, WAN, and WiFi network design and installation. We handle everything from small home networks to enterprise-level infrastructure.</p>
+                    <p class="text-muted">Complete LAN, WAN, and WiFi network design and installation for homes, offices and enterprises across Kenya.</p>
+                    <div class="mb-3">
+                        <strong class="small text-uppercase text-muted">Brands We Install:</strong>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="brand-badge">Cisco</span>
+                            <span class="brand-badge">Ubiquiti</span>
+                            <span class="brand-badge">TP-Link</span>
+                            <span class="brand-badge">Mikrotik</span>
+                            <span class="brand-badge">Netgear</span>
+                            <span class="brand-badge">D-Link</span>
+                            <span class="brand-badge">Huawei</span>
+                        </div>
+                    </div>
                     <div class="row g-2 mt-2">
                         <div class="col-auto"><span class="badge bg-light text-dark border">WiFi Setup</span></div>
                         <div class="col-auto"><span class="badge bg-light text-dark border">LAN Cabling</span></div>
                         <div class="col-auto"><span class="badge bg-light text-dark border">Router Config</span></div>
                         <div class="col-auto"><span class="badge bg-light text-dark border">Firewall Setup</span></div>
-                        <div class="col-auto"><span class="badge bg-light text-dark border">VPN Configuration</span></div>
+                        <div class="col-auto"><span class="badge bg-light text-dark border">VPN</span></div>
                     </div>
                     <div class="mt-3">
                         <span class="text-muted small">Starting from </span>
@@ -76,6 +92,9 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-md-5 order-1 order-md-2">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&auto=format" alt="Network Setup" class="img-fluid rounded-3">
+                </div>
             </div>
         </div>
 
@@ -83,13 +102,25 @@
 
         <!-- CCTV Installation -->
         <div id="cctv" class="service-section mb-5 mt-5">
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div class="service-icon-large"><i class="bi bi-camera-video"></i></div>
+            <div class="row align-items-center g-4">
+                <div class="col-md-5">
+                    <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&h=400&fit=crop&auto=format" alt="CCTV Installation" class="img-fluid rounded-3">
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-7">
+                    <div class="service-icon-large mb-3"><i class="bi bi-camera-video"></i></div>
                     <h3>CCTV Installation</h3>
-                    <p class="text-muted">Protect your property with our professional CCTV security camera systems. We handle site survey, installation, configuration, and maintenance.</p>
+                    <p class="text-muted">Protect your property with professional CCTV security camera systems. We handle site survey, installation, configuration, and maintenance.</p>
+                    <div class="mb-3">
+                        <strong class="small text-uppercase text-muted">Brands We Install:</strong>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="brand-badge">Hikvision</span>
+                            <span class="brand-badge">Dahua</span>
+                            <span class="brand-badge">CP Plus</span>
+                            <span class="brand-badge">Uniview</span>
+                            <span class="brand-badge">Axis</span>
+                            <span class="brand-badge">Reolink</span>
+                        </div>
+                    </div>
                     <div class="row g-2 mt-2">
                         <div class="col-auto"><span class="badge bg-light text-dark border">IP Cameras</span></div>
                         <div class="col-auto"><span class="badge bg-light text-dark border">DVR/NVR Setup</span></div>
@@ -112,13 +143,22 @@
 
         <!-- Office Infrastructure -->
         <div id="office" class="service-section mb-5 mt-5">
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div class="service-icon-large"><i class="bi bi-building"></i></div>
-                </div>
-                <div class="col-md-10">
+            <div class="row align-items-center g-4">
+                <div class="col-md-7 order-2 order-md-1">
+                    <div class="service-icon-large mb-3"><i class="bi bi-building"></i></div>
                     <h3>Office Infrastructure Setup</h3>
-                    <p class="text-muted">Complete office IT setup from scratch. We supply, install, and configure all IT equipment needed for your new or existing office.</p>
+                    <p class="text-muted">Complete office IT setup from scratch. We supply, install, and configure all IT equipment needed for your office.</p>
+                    <div class="mb-3">
+                        <strong class="small text-uppercase text-muted">Brands We Work With:</strong>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="brand-badge">HP</span>
+                            <span class="brand-badge">Dell</span>
+                            <span class="brand-badge">APC</span>
+                            <span class="brand-badge">Eaton</span>
+                            <span class="brand-badge">Cisco</span>
+                            <span class="brand-badge">Microsoft</span>
+                        </div>
+                    </div>
                     <div class="row g-2 mt-2">
                         <div class="col-auto"><span class="badge bg-light text-dark border">Workstation Setup</span></div>
                         <div class="col-auto"><span class="badge bg-light text-dark border">Server Installation</span></div>
@@ -131,6 +171,9 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-md-5 order-1 order-md-2">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&auto=format" alt="Office Setup" class="img-fluid rounded-3">
+                </div>
             </div>
         </div>
 
@@ -138,13 +181,26 @@
 
         <!-- Printer Servicing -->
         <div id="printer" class="service-section mb-5 mt-5">
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div class="service-icon-large"><i class="bi bi-printer"></i></div>
+            <div class="row align-items-center g-4">
+                <div class="col-md-5">
+                    <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&h=400&fit=crop&auto=format" alt="Printer Servicing" class="img-fluid rounded-3">
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-7">
+                    <div class="service-icon-large mb-3"><i class="bi bi-printer"></i></div>
                     <h3>Printer Servicing</h3>
                     <p class="text-muted">Expert printer repair and maintenance for all major brands. From inkjet to laser printers, we get you printing again fast.</p>
+                    <div class="mb-3">
+                        <strong class="small text-uppercase text-muted">Brands We Service:</strong>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="brand-badge">HP</span>
+                            <span class="brand-badge">Canon</span>
+                            <span class="brand-badge">Epson</span>
+                            <span class="brand-badge">Kyocera</span>
+                            <span class="brand-badge">Xerox</span>
+                            <span class="brand-badge">Brother</span>
+                            <span class="brand-badge">Ricoh</span>
+                        </div>
+                    </div>
                     <div class="row g-2 mt-2">
                         <div class="col-auto"><span class="badge bg-light text-dark border">Inkjet Repair</span></div>
                         <div class="col-auto"><span class="badge bg-light text-dark border">Laser Repair</span></div>
