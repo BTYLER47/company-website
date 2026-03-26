@@ -3,51 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Hubgroup Systems - IT Services & Equipment Nationwide Kenya{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}Professional IT services, computer repair, network setup, CCTV installation, printing and branding solutions across Kenya.{% endblock %}">
-    <meta name="keywords" content="{% block meta_keywords %}IT services Kenya, computer repair Nairobi, network setup, CCTV installation, printing, branding, IT equipment Kenya{% endblock %}">
+
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}TechSolutions Pro - IT Services & Equipment{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Professional IT services, computer repair, network setup, CCTV installation, printing and branding solutions.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}IT services, computer repair, network setup, CCTV, printing, branding, IT equipment{% endblock %}">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% block og_title %}TechSolutions Pro{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Professional IT services and equipment{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:image" content="{% block og_image %}{% load static %}{% static 'images/og-image.jpg' %}{% endblock %}">
+
+    <!-- Structured Data -->
     {% block structured_data %}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Hubgroup Systems",
-        "description": "Professional IT services and equipment nationwide Kenya",
-        "telephone": "+254745798060",
-        "email": "info@HubgroupSystems.co.ke",
-        "address": {"@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE"}
+        "name": "TechSolutions Pro",
+        "description": "Professional IT services, computer repair, network setup, CCTV installation, printing and branding solutions in Nairobi, Kenya.",
+        "telephone": "+254-700-000000",
+        "email": "info@techsolutionspro.co.ke",
+        "url": "https://www.techsolutionspro.co.ke",
+        "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-15:00"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nairobi",
+            "addressCountry": "KE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-1.286389",
+            "longitude": "36.817223"
+        },
+        "sameAs": [
+            "https://www.facebook.com/techsolutionspro",
+            "https://www.linkedin.com/company/techsolutionspro",
+            "https://www.instagram.com/techsolutionspro"
+        ]
     }
     </script>
     {% endblock %}
+
+    <!-- Favicon -->
     {% load static %}
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
 
-<!-- Top Info Bar -->
-<div class="top-bar d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-        <div class="d-flex gap-4">
-            <span><i class="bi bi-telephone-fill me-1 text-accent"></i>Nairobi: <a href="tel:+254745798060">+254 745 798 060</a></span>
-            <span><i class="bi bi-telephone-fill me-1 text-accent"></i>Mombasa: <a href="tel:+254705444447">+254 705 444 447</a></span>
-        </div>
-        <div>
-            <span><i class="bi bi-envelope-fill me-1 text-accent"></i><a href="mailto:info@HubgroupSystems.co.ke">info@HubgroupSystems.co.ke</a></span>
-        </div>
-    </div>
-</div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand fw-bold" href="/">
-            <span class="brand-icon">⚡</span> Hubgroup<span class="text-accent">Systems</span>
+            <span class="brand-icon">⚡</span> TechSolutions<span class="text-accent">Pro</span>
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
@@ -71,6 +95,14 @@
                 <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
                 <li class="nav-item ms-lg-2">
+                    <form class="d-flex" id="siteSearchForm" action="/products/" method="get">
+                        <div class="input-group input-group-sm" style="width:200px;">
+                            <input class="form-control border-0 bg-white bg-opacity-10 text-white" type="search" name="q" id="siteSearchInput" placeholder="Search products..." aria-label="Search" style="border-radius:6px 0 0 6px;">
+                            <button class="btn btn-accent btn-sm" type="submit" style="border-radius:0 6px 6px 0;"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item ms-lg-2">
                     <a class="btn btn-accent btn-sm px-3" href="/service-request/">
                         <i class="bi bi-headset me-1"></i>Get Support
                     </a>
@@ -80,7 +112,8 @@
     </div>
 </nav>
 
-<main>
+<!-- Main Content -->
+<main id="main-content">
     {% if messages %}
     <div class="container mt-3">
         {% for message in messages %}
@@ -91,6 +124,7 @@
         {% endfor %}
     </div>
     {% endif %}
+
     {% block content %}{% endblock %}
 </main>
 
@@ -99,18 +133,18 @@
     <div class="container">
         <div class="row g-4 py-5">
             <div class="col-lg-4">
-                <h5 class="fw-bold mb-3">⚡ Hubgroup<span class="text-accent">Systems</span></h5>
-                <p class="text-muted">Your trusted nationwide IT partner for equipment sales, repair, network infrastructure, CCTV, printing and branding across Kenya.</p>
+                <h5 class="fw-bold mb-3">⚡ TechSolutions<span class="text-accent">Pro</span></h5>
+                <p class="text-muted">Your trusted partner for IT solutions, equipment sales, and technology services. We power your business forward.</p>
                 <div class="social-links mt-3">
                     <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
                     <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
                     <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                    <a href="https://wa.me/254745798060" class="social-link"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/254700000000?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20IT%20services." class="social-link"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4">
-                <h6 class="fw-bold mb-3 text-uppercase">Services</h6>
+                <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Services</h6>
                 <ul class="list-unstyled footer-links">
                     <li><a href="/services/">Computer Repair</a></li>
                     <li><a href="/services/">Network Setup</a></li>
@@ -120,7 +154,7 @@
                 </ul>
             </div>
             <div class="col-lg-2 col-md-4">
-                <h6 class="fw-bold mb-3 text-uppercase">Company</h6>
+                <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Company</h6>
                 <ul class="list-unstyled footer-links">
                     <li><a href="/about/">About Us</a></li>
                     <li><a href="/products/">Products</a></li>
@@ -130,26 +164,24 @@
                 </ul>
             </div>
             <div class="col-lg-4 col-md-4">
-                <h6 class="fw-bold mb-3 text-uppercase">Our Offices</h6>
+                <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Contact Info</h6>
                 <ul class="list-unstyled contact-info">
-                    <li class="mb-2">
-                        <i class="bi bi-geo-alt-fill me-2 text-accent"></i><strong>Nairobi Office</strong>
-                        <div class="ms-4"><a href="tel:+254745798060">+254 745 798 060</a></div>
-                    </li>
-                    <li class="mb-2">
-                        <i class="bi bi-geo-alt-fill me-2 text-accent"></i><strong>Mombasa Office</strong>
-                        <div class="ms-4"><a href="tel:+254705444447">+254 705 444 447</a></div>
-                    </li>
-                    <li class="mb-2"><i class="bi bi-envelope-fill me-2 text-accent"></i><a href="mailto:info@HubgroupSystems.co.ke">info@HubgroupSystems.co.ke</a></li>
-                    <li class="mt-2"><i class="bi bi-clock me-2 text-accent"></i>Mon–Fri: 8AM – 6PM</li>
+                    <li><i class="bi bi-telephone-fill me-2 text-accent"></i>+254 700 000000</li>
+                    <li><i class="bi bi-envelope-fill me-2 text-accent"></i>info@techsolutionspro.co.ke</li>
+                    <li><i class="bi bi-geo-alt-fill me-2 text-accent"></i>Nairobi, Kenya</li>
+                    <li class="mt-2"><strong>Business Hours:</strong></li>
+                    <li><i class="bi bi-clock me-2 text-accent"></i>Mon–Fri: 8AM – 6PM</li>
                     <li><i class="bi bi-clock me-2 text-accent"></i>Sat: 9AM – 3PM</li>
                 </ul>
             </div>
         </div>
         <hr class="border-secondary">
         <div class="row py-3 align-items-center">
-            <div class="col-md-6 text-muted small">&copy; {% now "Y" %} Hubgroup Systems. All rights reserved.</div>
+            <div class="col-md-6 text-muted small">
+                &copy; {% now "Y" %} TechSolutions Pro. All rights reserved.
+            </div>
             <div class="col-md-6 text-md-end">
+                <a href="/sitemap.xml" class="text-muted small me-3">Sitemap</a>
                 <a href="#" class="text-muted small me-3">Privacy Policy</a>
                 <a href="#" class="text-muted small">Terms of Service</a>
             </div>
@@ -157,64 +189,19 @@
     </div>
 </footer>
 
-<!-- Promo Popup — Top Right Corner -->
-<div id="promoPopup" class="promo-popup">
-    <div class="promo-popup-inner">
-        <button class="promo-close" onclick="closePromo()">✕</button>
-        <div class="promo-badge">🔥 Special Offers</div>
-        <h4 class="promo-title">Hubgroup Systems</h4>
-        <div class="promo-slides">
-            <div class="promo-slide active">
-                <div class="promo-icon">💻</div>
-                <h5>Laptop Sale</h5>
-                <p>Up to <strong class="text-accent">20% OFF</strong> on HP, Dell & Lenovo laptops!</p>
-                <a href="/products/" class="btn btn-accent btn-sm px-4">Shop Now</a>
-            </div>
-            <div class="promo-slide">
-                <div class="promo-icon">🔧</div>
-                <h5>Free Diagnosis</h5>
-                <p>Book any repair and get a <strong class="text-accent">FREE diagnosis</strong> today!</p>
-                <a href="/service-request/" class="btn btn-accent btn-sm px-4">Book Now</a>
-            </div>
-            <div class="promo-slide">
-                <div class="promo-icon">📡</div>
-                <h5>Network Deal</h5>
-                <p>Cisco & Ubiquiti setup from <strong class="text-accent">KES 5,000!</strong></p>
-                <a href="/service-request/" class="btn btn-accent btn-sm px-4">Get Quote</a>
-            </div>
-            <div class="promo-slide">
-                <div class="promo-icon">🎨</div>
-                <h5>Branding Offer</h5>
-                <p>T-shirts from <strong class="text-accent">KES 500</strong> — min 5 pieces!</p>
-                <a href="/printing-branding/" class="btn btn-accent btn-sm px-4">Order Now</a>
-            </div>
-            <div class="promo-slide">
-                <div class="promo-icon">📢</div>
-                <h5>Nationwide!</h5>
-                <p>Now serving Nairobi, Mombasa & <strong class="text-accent">all over Kenya!</strong></p>
-                <a href="/contact/" class="btn btn-accent btn-sm px-4">Contact Us</a>
-            </div>
-        </div>
-        <div class="promo-dots">
-            <span class="promo-dot active" onclick="goToSlide(0)"></span>
-            <span class="promo-dot" onclick="goToSlide(1)"></span>
-            <span class="promo-dot" onclick="goToSlide(2)"></span>
-            <span class="promo-dot" onclick="goToSlide(3)"></span>
-            <span class="promo-dot" onclick="goToSlide(4)"></span>
-        </div>
-        <p class="promo-footer small text-muted mt-2">
-            <input type="checkbox" id="dontShow" onchange="dontShowAgain()">
-            <label for="dontShow"> Don't show again today</label>
-        </p>
-    </div>
-</div>
-
-<!-- WhatsApp Float -->
-<a href="https://wa.me/254745798060" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/254700000000?text=Hi%2C%20I%27d%20like%20to%20request%20a%20service%20from%20TechSolutions%20Pro." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
 
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
 <script src="{% static 'js/main.js' %}"></script>
 {% block extra_js %}{% endblock %}
 </body>
